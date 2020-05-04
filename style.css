@@ -1,0 +1,20 @@
+#navText {
+  color: white;
+}
+
+#inputArea {
+  display: flex;
+  justify-content: left;
+  margin-left: 0px;
+  border-right: solid gray 1px;
+  width: 400px;
+  height: 800px;
+}
+
+#inputBar {
+  width: 400px;
+}
+
+#enter {
+  height: 30px;
+}
