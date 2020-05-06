@@ -4,7 +4,7 @@
 
 #inputArea {
   display: flex;
-  justify-content: left;
+
   margin-left: 0px;
   border-right: solid gray 1px;
   width: 400px;
@@ -12,9 +12,23 @@
 }
 
 #inputBar {
-  width: 400px;
+  width: 450px;
+  height: 200px;
 }
 
 #enter {
   height: 30px;
+}
+
+#listContainer {
+  width: 500px;
+}
+
+.float-right {
+  float: right;
+  margin-right: 200px;
+}
+
+#city {
+  font-size: 2rem;
 }

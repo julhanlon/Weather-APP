@@ -16,22 +16,35 @@
     <nav class="navbar navbar-dark bg-dark">
       <h1 id="navText" class="text-center">Weather Dashboard</h1>
     </nav>
-    <div id="inputArea" class="container">
-      <div id="inputBar" class="input-group input-group-sm mb-3">
-        <div id="enter" class="input-group-prepend">
-          <button class="input-group-text" id="btnSubmit" type="submit">
-            Enter
-          </button>
+    <div class="pageContainer">
+      <section #id="mainWeather" class="float-right">
+        <div id="todayWeather">
+          <div id="city"></div>
+          <div id="temp"></div>
+          <div id="humidity"></div>
+          <div id="windSpeed"></div>
         </div>
-        <input
-          id="userInput"
-          type="text"
-          class="form-control"
-          aria-label="Sizing example input"
-          aria-describedby="inputGroup-sizing-sm"
-          placeholder="type city name"
-        />
-      </div>
+      </section>
+      <section id="inputArea" class="container">
+        <div id="inputBar" class="input-group input-group-sm mb-3">
+          <div id="enter" class="input-group-prepend">
+            <button class="input-group-text" id="btnSubmit" type="submit">
+              Enter
+            </button>
+          </div>
+          <input
+            id="userInput"
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+            placeholder="type city name"
+          />
+        </div>
+        <div id="listContainer">
+          <ul id="list-group" class="list-group"></ul>
+        </div>
+      </section>
     </div>
     <script
       src="https://code.jquery.com/jquery-3.5.0.min.js"
