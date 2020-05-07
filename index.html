@@ -13,19 +13,32 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-dark bg-dark text-center">
       <h1 id="navText" class="text-center">Weather Dashboard</h1>
     </nav>
     <div class="pageContainer">
-      <section #id="mainWeather" class="float-right">
-        <div id="todayWeather">
-          <div id="city"></div>
-          <div id="temp"></div>
-          <div id="humidity"></div>
-          <div id="windSpeed"></div>
-        </div>
+      <section id= "rightSide" class = "float-right">
+        <article #id="mainWeather" >
+          <div id="todayWeather">
+            <div id="city"></div>
+            <div id="temp"></div>
+            <div id="humidity"></div>
+            <div id="windSpeed"></div>
+          </div>
+        </article>
+        <article>
+          <div id="fiveday" >
+            <ul id="fiveforecast">
+              <li id = "tomorrow"></li>
+              <li id = "dayAfter"></li>
+              <li id = "day3"></li>
+              <li id = "day4"></li>
+              <li id = "day5"></li>
+            </ul>
+          </div>
+        </article>
       </section>
-      <section id="inputArea" class="container">
+          <section id="inputArea" class="container">
         <div id="inputBar" class="input-group input-group-sm mb-3">
           <div id="enter" class="input-group-prepend">
             <form>
@@ -47,7 +60,7 @@
           <ul id="list-group" class="list-group"></ul>
         </div>
       </section>
-    </div>
+      </div>
     <script
       src="https://code.jquery.com/jquery-3.5.0.min.js"
       integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
