@@ -3,7 +3,7 @@
 }
 
 #inputArea {
-  display: flex;
+  display: column;
 
   margin-left: 0px;
   border-right: solid gray 1px;
@@ -12,8 +12,9 @@
 }
 
 #inputBar {
-  width: 450px;
-  height: 200px;
+  width: 350px;
+  height: 50px;
+  margin-left: 0px;
 }
 
 #enter {
