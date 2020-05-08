@@ -17,28 +17,7 @@
       <h1 id="navText" class="text-center">Weather Dashboard</h1>
     </nav>
     <div class="pageContainer">
-      <section id= "rightSide" class = "float-right">
-        <article #id="mainWeather" >
-          <div id="todayWeather">
-            <div id="city"></div>
-            <div id="temp"></div>
-            <div id="humidity"></div>
-            <div id="windSpeed"></div>
-          </div>
-        </article>
-        <article>
-          <div id="fiveday" >
-            <ul id="fiveforecast">
-              <li id = "tomorrow"></li>
-              <li id = "dayAfter"></li>
-              <li id = "day3"></li>
-              <li id = "day4"></li>
-              <li id = "day5"></li>
-            </ul>
-          </div>
-        </article>
-      </section>
-          <section id="inputArea" class="container">
+      <section id="inputArea" class="container">
         <div id="inputBar" class="input-group input-group-sm mb-3">
           <div id="enter" class="input-group-prepend">
             <form>
@@ -60,7 +39,73 @@
           <ul id="list-group" class="list-group"></ul>
         </div>
       </section>
+      <section id= "rightSide" class = "float-right">
+        <article #id="mainWeather" >
+          <div id="todayWeather">
+            <div id="todayInfo">
+              <div id="city"></div>
+              <div id="temp"></div>
+              <div id="humidity"></div>
+              <div id="windSpeed"></div>
+              <div id="UVIndex"></div>
+            </div>
+          </div>
+        </article>
+        <article id=" fiveday">
+          <div id="fiveDiv" class = "container">
+            <ul id="fiveforecast">
+              <li>
+                <div class="card-group">
+                  <div class="card">
+                    <p id = "tomorrowDate"></p>
+                    <div id = "tomorrow" class="card-body">
+                      <h5 id = "tomorrow" class="card-title"></h5>
+                    </div>
+                  </div>
+              </li>
+              <li>
+                <div class="card-group">
+                  <div  class="card">
+                    <p id = "dayAfterDate"></p>
+                    <div id = "dayAfter" class="card-body">
+                      <h5 class="card-title"></h5>
+                    </div>
+                  </div>
+              </li>
+              <li>
+                <div class="card-group">
+                  <div class="card">
+                    <p id = "day3Date"></p>
+                      <div id = "day3" class="card-body">
+                      <h5 class="card-title"></h5>
+                      
+                    </div>
+                  </div>
+              </li>
+              <li>
+                <div class="card-group">
+                  <div class="card">
+                    <p id = "day4Date"></p>
+                    <div id="day4" class="card-body">
+                      <h5 class="card-title"></h5>
+                    </div>
+                  </div>
+              </li>
+              <li>
+                <div class="card-group">
+                  <div class="card">
+                    <p id = "day5Date"></p>
+                    <div id = "day5" class="card-body">
+                      <h5 class="card-title"></h5>
+                    </div>
+                  </div>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </section>
       </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment-with-locales.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.0.min.js"
       integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="

@@ -12,23 +12,17 @@
   float: left;
   margin-left: 0px;
   border-right: solid gray 1px;
-  width: 400px;
   height: 600px;
 }
 
 #inputBar {
   margin-top: 10px;
-  width: 350px;
-  height: 50px;
+  width: 100%;
   margin-left: 0px;
 }
 
 #enter {
   height: 25px;
-}
-
-#listContainer {
-  width: 400px;
 }
 
 .float-right {
@@ -42,25 +36,58 @@
 }
 .cities {
   border: solid gray 1px;
-  width: 380px;
+  width: 100%;
   margin-bottom: 3px;
 }
 
 #fiveday {
+  flex-direction: row;
+  display: inline;
   display: flex;
-  align-items: flex-end;
+  justify-content: space-evenly;
 }
 
 #fiveforecast {
-  margin-left: 40px;
-  margin-bottom: 200px;
   display: inline;
+  flex-direction: row;
 }
 
 ul#fiveforecast li {
   display: inline;
+  flex-direction: row;
 }
 
-#rightSide {
+ul#fiveforecast {
+  display: flex;
+  flex-direction: row;
+  width: 1000px;
+  height: 250px;
+  margin-top: 20px;
+}
+
+.card-group {
+  width: 170px;
+  height: 200px;
+  margin-right: 20px;
   flex-direction: column;
+}
+
+#todayWeather {
+  height: 300px;
+  border-bottom: solid gray 1px;
+}
+
+.pageContainer {
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+  border: solid gray 2px;
+}
+
+.card {
+  background-color: lightblue;
+}
+
+#todayInfo {
+  margin-left: 100px;
 }
