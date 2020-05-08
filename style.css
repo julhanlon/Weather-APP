@@ -91,3 +91,23 @@ ul#fiveforecast {
 #todayInfo {
   margin-left: 100px;
 }
+
+.green {
+  background-color: lightgreen;
+  width: 110px;
+}
+
+.yellow {
+  background-color: lightyellow;
+  width: 110px;
+}
+
+.orange {
+  background-color: orange;
+  width: 110px;
+}
+
+.red {
+  background-color: red;
+  width: 110px;
+}

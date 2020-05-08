@@ -4,6 +4,7 @@ $(document).ready(function () {
     e.preventDefault();
 
     var userInput = $("#userInput").val();
+    var cities = JSON.parse(window.localStorage.getItem("location")) || [];
 
     $.ajax({
       type: "GET",
@@ -15,6 +16,10 @@ $(document).ready(function () {
       console.log(today);
       $("#city").text(res.city.name + " " + today);
       $("#list-group").append(`<li class= "btn cities">${res.city.name}</li>`);
+
+      cities.push(userInput);
+      window.localStorage.setItem("location", JSON.stringify(cities));
+
       var kTemp = res.list[0].main.temp;
       var fTemp = Math.round((kTemp - 273.15) * (9 / 5) + 32);
       $("#temp").text(`Temperature: ${fTemp} F`);
@@ -30,9 +35,19 @@ $(document).ready(function () {
         console.log(res);
         var uv = res.value;
         $("#UVIndex").text("UV Index: " + uv);
-      });
 
-      // $("#uvIndex").text(res.);
+        if (uv < 2) {
+          $("#UVIndex").attr("class", "green");
+        }
+        if (uv < 6) {
+          $("#UVIndex").attr("class", " yellow");
+        }
+        if (uv < 8) {
+          $("#UVIndex").attr("class", "orange");
+        } else {
+          $("#UVIndex").attr("class", "red");
+        }
+      });
 
       // for 5 day forecast
 
@@ -85,9 +100,9 @@ $(document).ready(function () {
       url: `https://api.openweathermap.org/data/2.5/forecast?q=${text}&appid=4d1769f6552330211a2272f5cf6614ce`,
       dataType: "json",
     }).then(function (res) {
-      var today = moment().format("MMM Do YYYY");
+      var today = moment().format("l");
       $("#city").text(res.city.name + " " + today);
-      $("#list-group").append(`<li class= "btn cities">${res.city.name}</li>`);
+      $("#list-group").append(`<li> class= "btn cities">${res.city.name}</li>`);
       var kTemp = res.list[0].main.temp;
       var fTemp = Math.round((kTemp - 273.15) * (9 / 5) + 32);
       $("#temp").text(`Temperature ${fTemp} F`);
