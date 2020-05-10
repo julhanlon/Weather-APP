@@ -134,7 +134,7 @@ $(document).ready(function () {
 
     $.ajax({
       type: "GET",
-      url: `https://api.openweathermap.org/data/2.5/forecast?q=${text}&appid=4d1769f6552330211a2272f5cf6614ce`,
+      url: `https://api.openweathermap.org/data/2.5/forecast?q=${text}&appid=4d1769f6552330211a2272f5cf6614ce&units=imperial`,
       dataType: "json",
     }).then(function (res) {
       var today = moment().format("l");
