@@ -18,11 +18,14 @@ $(document).ready(function () {
     e.preventDefault();
 
     var userInput = $("#userInput").val();
-    $("#list-group").append(`<li class= "btn cities">${res.city.name}</li>`);
 
     cities.push(userInput);
     window.localStorage.setItem("cities", JSON.stringify(cities));
     getOpenWeatherData(userInput);
+    $("#list-group").append(`<li class= "btn cities">${userInput}</li>`);
+
+    cities.push(userInput);
+    window.localStorage.setItem("cities", JSON.stringify(cities));
   });
   // Eventlistener for cities that already appear in the list
   $(document).on("click", ".btn", function () {
