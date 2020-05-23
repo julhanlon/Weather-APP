@@ -30,17 +30,6 @@ $(document).ready(function () {
     getOpenWeatherData(text);
   });
 
-  // var apiKey = "AIzaSyDe48GOfu5l25jFZdEtwDogLDAYupAnRcY";
-  // $.ajax({
-  //   type: "GET",
-  //   url: `https://maps.googleapis.com/maps/api/place/photo?parameters?${apiKey}&photoreference=${userInput}`,
-  //   dataType: "json",
-  // }).then(function (res) {
-  //   console.log(res);
-  //   // var gif = res.data[0].images.original.url;
-  //   // $("#giphy").html(`<img class="gif"  data-gif=${gif} src=${gif}></img>`);
-  // });
-
   function getOpenWeatherData(searchItem) {
     $.ajax({
       type: "GET",
