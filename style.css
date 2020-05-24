@@ -10,6 +10,10 @@
   );
 }
 
+body {
+  font-family: "Muli", sans-serif;
+}
+
 #navText {
   color: white;
 }
